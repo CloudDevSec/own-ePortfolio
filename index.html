@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    </head>   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My ePortfolio</title>
+    <meta name="description" content="Portfolio of Sascha Meyer, specialist in Cloud Security, DevSecOps, GRC, AWS, and Azure.">
+    <link rel="stylesheet" href="style.css">
+   
+
+  
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1c1c1c; 
+            color: white; 
+        }
+        header {
+            background-color: #1c1c1c; 
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #0073e6; /* Blue text */
+            font-weight: bold;
+        }
+        #about {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+        .about-image {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+        .about-image img {
+            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .about-text {
+            flex: 2;
+            padding: 10px;
+        }
+        .about-text p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1c1c1c; 
+            color: white; 
+            position: relative;
+        }
+        .project-category h2 {
+            text-align: center;
+            margin-top: 20px;
+            color: #0073e6; 
+        }
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .project-item {
+            width: 80%;
+            background: #4b4b4b; 
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            position: relative;
+        }
+        .project-item h3 {
+            margin: 0;
+            cursor: pointer;
+            color: #0073e6;
+            transition: color 0.3s ease;
+        }
+        .project-item h3:hover {
+            color: #005bb5;
+        }
+        .project-description {
+            display: none;
+            padding: 10px 0;
+            font-size: 0.9em;
+            color: #ccc; 
+        }
+        .project-item:hover .project-description {
+            display: block;
+        }
+        #contact {
+            text-align: center;
+            padding: 20px;
+            background-color: #1c1c1c; 
+            color: #0073e6; 
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #333; 
+            color: white; 
+        }
+        form button {
+            background-color: #005bb5;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        form button:hover {
+            background-color: #003f7f;
+        }
+
+        /* Media Queries for responsive design */
+        @media (max-width: 1200px) {
+            .about-content {
+                flex-direction: column;
+            }
+            .about-image, .about-text {
+                flex: 1 1 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+            .project-list {
+                flex-direction: column;
+            }
+            .project-item {
+                width: 100%;
+            }
+            .about-content {
+                flex-direction: column;
+            }
+            .about-image, .about-text {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header, footer {
+                text-align: center;
+            }
+            form input, form textarea, form button {
+                width: 100%;
+            }
+
+        }
+       
+               
+    </style>
+</head>
+<body>
+    </div>
+    <div id="main-content">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#impressum">Impressum</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h1>About Me</h1>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Good day. My name is Sascha Meyer, and I am currently undertaking a programme of study with the objective of acquiring a qualification in the field of technology. Having previously obtained a Bachelor's degree in Social Work, I have gained an understanding of the importance of supporting people and building communities. I am now embarking on a new phase of my career, which will see me retraining as a cloud and web development expert at Techstarter. My certifications as an AWS Cloud Practitioner, LPI Linux Essentials, Professional Scrum Master, AZ-900 and Software Testing serve to illustrate my skills and commitment to this industry.</p>
+                    <p>What distinguishes me is my unwavering pursuit of further education and self-improvement. In addition to my retraining, I am actively acquiring certificates in cyber security in order to constantly expand my knowledge and skills. My background in social work has equipped me with the ability to empathise and communicate effectively, both of which are crucial in the technology industry.</p>
+                    <p>I am seeking a position where I can utilise my passion for technology to develop innovative solutions that have a positive impact on society. If you are looking for a dedicated team member who is ready to take on challenges and constantly evolve, then I am the right person for you.</p>
+                </div>
+                <div class="about-image">
+                    <img src="Sascha.JPG" alt="Sascha Meyer">
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h1>Skills</h1>
+            <ul>
+                <li>Cloud Security</li>
+                <li>DevSecOps</li>
+                <li>GRC</li>
+                <li>AWS & Azure</li>
+                <li>Full Stack Development</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h1>Projects</h1>
+            <div class="project-category aws-projects">
+                <h2>AWS Projects</h2>
+                <div class="project-list">
+                    <!-- AWS Projects -->
+                    <div class="project-item">
+                        <h3>Project 1: Host a Website on Amazon S3</h3>
+                        <div class="project-description">
+                            In this project, I hosted a static website on Amazon S3, which offers scalable storage and high availability for static content such as HTML, CSS, JavaScript, and images. The objective was to leverage AWS’s infrastructure to ensure a reliable, performant, and secure website hosting solution.
+                            <br><strong>Services and Tools:</strong>
+                            <ul>
+                                <li>Amazon S3: Used for storing and serving the static website files. Configured the S3 bucket to host the website and manage access permissions.</li>
+                                <li>Amazon Route 53: Managed DNS to route user requests to the S3 bucket. Configured a custom domain and set up DNS records.</li>
+                                <li>AWS CloudFront: Deployed as a Content Delivery Network (CDN) to cache the website content globally, reducing latency and improving load times for users worldwide.</li>
+                                <li>Amazon Certificate Manager (ACM): Issued and managed SSL/TLS certificates to enable HTTPS, ensuring secure communication between users and the website.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 2: Visualize Netflix Data using Amazon QuickSight</h3>
+                        <div class="project-description">
+                            This project involved analyzing and visualizing Netflix data to gain insights into usage patterns, trends, and user behavior. Amazon QuickSight was utilized to create interactive dashboards and visual reports.
+                            <br><strong>Services and Tools:</strong>
+                            <ul>
+                                <li>Amazon QuickSight: Used for creating data visualizations, interactive dashboards, and detailed reports.</li>
+                                <li>Amazon S3: Stored raw Netflix data in CSV format. Managed data ingestion and storage.</li>
+                                <li>AWS Glue: Utilized for data cataloging, transformation, and preparation. Created ETL (Extract, Transform, Load) jobs to preprocess the data.</li>
+                                <li>Amazon Athena: Queried the data stored in S3 using SQL to generate insights and prepare data for visualization.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 3: Build a Chatbot with Amazon Lex</h3>
+                        <div class="project-description">
+                            In this project, I built a chatbot using Amazon Lex, designed to understand and respond to user inquiries. The chatbot was developed for customer service applications, capable of handling common queries and providing automated responses.
+                            <br><strong>Services and Tools:</strong>
+                            <ul>
+                                <li>Amazon Lex: Used to design, build, and deploy the chatbot. Configured intents, slots, and utterances to understand user inputs.</li>
+                                <li>AWS Lambda: Provided backend logic for the chatbot. Implemented functions to process user requests and interact with external APIs or databases.</li>
+                                <li>Amazon DynamoDB: Used for storing session data and user interactions. Ensured quick and reliable data retrieval.</li>
+                                <li>Amazon CloudWatch: Monitored and logged chatbot interactions, providing insights into usage patterns and performance metrics.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 4: Deploy a Serverless REST API with AWS Lambda and API Gateway</h3>
+                        <div class="project-description">
+                            This project focused on creating a serverless REST API using AWS Lambda and Amazon API Gateway. The API was designed to handle CRUD operations for a simple todo application.
+                            <br><strong>Services and Tools:</strong>
+                            <ul>
+                                <li>AWS Lambda: Implemented the API logic using serverless functions, handling different endpoints and HTTP methods.</li>
+                                <li>Amazon API Gateway: Configured as the API frontend, managing API routes, request validation, and authorization.</li>
+                                <li>Amazon DynamoDB: Used as the backend database for storing todo items, offering scalability and fast data access.</li>
+                                <li>AWS IAM: Managed roles and permissions to ensure secure access to AWS resources by the Lambda functions and API Gateway.</li>
+                                <li>Amazon CloudWatch: Monitored API requests, logged errors, and tracked performance metrics.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 5: Implement Continuous Deployment for a Web Application with AWS CodePipeline</h3>
+                        <div class="project-description">
+                            In this project, I set up a continuous deployment pipeline for a web application using AWS CodePipeline, which automated the build, test, and deployment processes.
+                            <br><strong>Services and Tools:</strong>
+                            <ul>
+                                <li>AWS CodePipeline: Orchestrated the entire CI/CD pipeline, defining stages for source, build, test, and deploy.</li>
+                                <li>AWS CodeCommit: Used as the source control repository to store the application code.</li>
+                                <li>AWS CodeBuild: Automated the build process, compiling the application code and running tests.</li>
+                                <li>AWS CodeDeploy: Managed the deployment of the application to various environments (e.g., staging, production).</li>
+                                <li>AWS Elastic Beanstalk: Deployed the application to an environment, managing the infrastructure and scaling.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 6: Cloud DevOps - Set Up A Git Repository With AWS CodeCommit</h3>
+                        <div class="project-description">
+                            In this project, I set up a Git repository using AWS CodeCommit to manage source code in a scalable and secure environment. The goal was to enable efficient version control and collaboration.
+                            <br><strong>Services and Tools:</strong>
+                            <ul>
+                                <li>AWS CodeCommit: Created and managed a Git repository for source code versioning. Configured repository settings and access controls.</li>
+                                <li>AWS IAM: Set up permissions and policies to control access to the CodeCommit repository. Ensured secure access for team members.</li>
+                                <li>AWS CloudTrail: Logged repository activities for auditing and monitoring purposes. Enabled tracking of changes and user actions.</li>
+                                <li>AWS CodePipeline: Integrated the CodeCommit repository into a continuous integration/continuous deployment (CI/CD) pipeline to automate the build and deployment process.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 7: Cloud DevOps - Secure Project Dependencies with AWS CodeArtifact</h3>
+                        <div class="project-description">
+                            This project involved securing and managing project dependencies using AWS CodeArtifact, a managed artifact repository service. The goal was to streamline dependency management and improve security.
+                            <br><strong>Services and Tools:</strong>
+                            <ul>
+                                <li>AWS CodeArtifact: Managed and stored project dependencies and packages. Configured repositories and domain settings.</li>
+                                <li>AWS IAM: Configured access controls and policies to secure access to the CodeArtifact repository. Managed user and role permissions.</li>
+                                <li>AWS CodeBuild: Integrated CodeArtifact into the build process to automatically resolve and pull dependencies. Ensured seamless integration and build automation.</li>
+                                <li>AWS CloudWatch: Monitored and logged CodeArtifact activities, providing insights into repository usage and security events.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 8: Cloud DevOps - Package an App with AWS CodeBuild</h3>
+                        <div class="project-description">
+                            In this project, I automated the packaging and deployment of an application using AWS CodeBuild. The objective was to streamline the build process and ensure consistent and reliable application delivery.
+                            <br><strong>Services and Tools:</strong>
+                            <ul>
+                                <li>AWS CodeBuild: Automated the build process, compiling source code, running tests, and packaging the application. Configured build specifications and environment settings.</li>
+                                <li>AWS CodeCommit: Managed the source code repository. Integrated with CodeBuild for source code retrieval and version control.</li>
+                                <li>AWS CodePipeline: Orchestrated the CI/CD workflow, coordinating the build, test, and deployment stages. Configured pipeline stages and actions.</li>
+                                <li>Amazon S3: Stored build artifacts, such as compiled binaries and deployment packages. Managed access controls and versioning.</li>
+                                <li>AWS IAM: Managed permissions and access controls for the build and deployment process. Ensured secure handling of build resources and credentials.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 9: AWS Security Alerting</h3>
+                        <div class="project-description">
+                            In my AWS Security Alerting project, I implemented GuardDuty in my AWS account to detect potential security threats. By using CloudWatch, I have set up rules to receive alerts via SNS email for security anomalies detected by GuardDuty. This enables a quick response to potential security risks and proactive measures to secure the AWS infrastructure.
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 10: DevSecOps - AWS Infrastructure Automation with Terraform</h3>
+                        <div class="project-description">
+                            This project demonstrates the use of Terraform, an open-source infrastructure automation tool, to deploy a basic AWS infrastructure. This includes the creation of a Virtual Private Cloud (VPC), a subnet, an EC2 instance, and an S3 bucket. By using Terraform, the infrastructure can be managed as code and the provisioning, scaling, and management of AWS resources can be automated. This project serves as an exemplar of optimal practices for the automation of infrastructure in the cloud and can serve as a foundation for the development of more complex infrastructure configurations.
+                            <br><strong>Services and Tools:</strong>
+                            <ul>
+                                <li>AWS CLI</li>
+                                <li>AWS IAM</li>
+                                <li>Trivy plugin</li>
+                                <li>IaC</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 11: Implementing a Highly Available and Scalable Nextcloud Infrastructure on AWS</h3>
+                        <div class="project-description">
+                            Develop a secure, cost-effective, and scalable file repository for enterprise data based on the Nextcloud open-source software.
+                            <br><strong>Technologies:</strong>
+                            <ul>
+                                <li>AWS VPC, EC2, RDS, Load Balancer, Auto Scaling, Security Groups, NAT Gateway, Internet Gateway, MySQL.</li>
+                            </ul>
+                            <br><strong>Tasks:</strong>
+                            <ul>
+                                <li>Creation and configuration of a VPC with public and private subnets in the Frankfurt area.</li>
+                                <li>Implementation of security mechanisms using security groups and route tables.</li>
+                                <li>Provisioning and configuration of EC2 instances and MySQL databases.</li>
+                                <li>Configured an auto-scaling group and a load balancer to ensure high availability and scalability.</li>
+                                <li>Automate Nextcloud installation and database connectivity.</li>
+                            </ul>
+                            <br><strong>Result:</strong>
+                            <p>Successfully deployed a robust infrastructure to securely store and share enterprise data using Nextcloud.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-category security-projects">
+                <h2>Security Projects</h2>
+                <div class="project-list">
+                    <!-- Security Projects -->
+                    <div class="project-item">
+                        <h3>Project 1: Implement a Secure Network Architecture on AWS</h3>
+                        <div class="project-description">
+                            This project involved designing and implementing a secure network architecture on AWS. The goal was to ensure data protection, secure communication, and compliance with best security practices.
+                            <br><strong>Services and Tools:</strong>
+                            <ul>
+                                <li>Amazon VPC: Created a Virtual Private Cloud to isolate and control network resources. Configured subnets, route tables, and network gateways.</li>
+                                <li>AWS IAM: Managed identity and access management policies to control permissions and access to AWS resources.</li>
+                                <li>AWS KMS: Used Key Management Service to manage encryption keys and secure sensitive data.</li>
+                                <li>AWS WAF: Implemented a Web Application Firewall to protect web applications from common threats and vulnerabilities.</li>
+                                <li>AWS Shield: Used to protect against DDoS attacks and ensure availability and performance.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 2: Perform Vulnerability Assessment and Penetration Testing</h3>
+                        <div class="project-description">
+                            This project focused on conducting vulnerability assessments and penetration testing on a web application to identify and mitigate security risks.
+                            <br><strong>Services and Tools:</strong>
+                            <ul>
+                                <li>Nessus: Used for automated vulnerability scanning and assessment.</li>
+                                <li>OWASP ZAP: Employed for manual and automated penetration testing to identify security flaws.</li>
+                                <li>Burp Suite: Utilized for advanced web vulnerability scanning and testing.</li>
+                                <li>Metasploit: Used for exploiting vulnerabilities and verifying their impact.</li>
+                                <li>Wireshark: Monitored network traffic to identify suspicious activities and potential threats.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 3: Implement Security Monitoring and Incident Response</h3>
+                        <div class="project-description">
+                            In this project, I set up a security monitoring and incident response system to detect, analyze, and respond to security incidents.
+                            <br><strong>Services and Tools:</strong>
+                            <ul>
+                                <li>Splunk: Implemented for real-time monitoring, log analysis, and incident detection.</li>
+                                <li>Snort: Used as an intrusion detection system (IDS) to monitor network traffic for malicious activity.</li>
+                                <li>AlienVault OSSIM: Deployed for comprehensive security information and event management (SIEM).</li>
+                                <li>Syslog: Configured for centralized log collection and management.</li>
+                                <li>AWS CloudTrail: Used for logging and monitoring AWS account activities.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 4: Conduct Risk Assessment and Management</h3>
+                        <div class="project-description">
+                            This project involved conducting a risk assessment to identify potential threats and vulnerabilities, and implementing risk management strategies to mitigate them.
+                            <br><strong>Services and Tools:</strong>
+                            <ul>
+                                <li>ISO/IEC 27005: Followed the international standard for information security risk management.</li>
+                                <li>NIST SP 800-30: Used the NIST framework for conducting risk assessments.</li>
+                                <li>Risk Management Tools: Utilized tools like RiskWatch and RiskLens for risk analysis and management.</li>
+                                <li>AWS Trusted Advisor: Employed for evaluating AWS infrastructure security and identifying potential risks.</li>
+                                <li>Threat Modeling: Conducted threat modeling sessions to identify and address potential security threats.</li>
+                            </ul>
+                        </div>
+                    </div>
+                <div class="project-item">
+                    <h3>Project 5: Pentestertool</h3>
+                    <div class="project-description">
+                        This script combines the functions of checking network connectivity, scanning networks, performing vulnerability analysis and launching a sniffer into a single script. It provides an interactive main menu that allows the user to choose between different options. Please note that some commands (such as sudo) require root privileges and the script may need to be run with administrator privileges. It is also important to note that sniffing network data may be subject to legal restrictions and should be used accordingly.
+                    </div>
+                </div>
+                <div class="project-item">
+                    <h3>Project 6: Integrity-Check</h3>
+                    <div class="project-description">
+                        This Python script demonstrates a simple integrity check for a file using checksums, hash functions, version control and authorisation.
+                    </div>
+                </div>
+                <div class="project-item">
+                    <h3>Project 7: HoneyPot</h3>
+                    <div class="project-description">
+                        A honeypot is a security measure used to attract and identify attackers. This script creates a simple honeypot that listens for connection attempts and generates log files. Please note that this is only a basic example and must be customised according to your requirements.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            
+
+        <section id="certificates">
+            <h1>Certificates</h1>
+            <ul>
+                <li>Google Cybersecurity Certificate</li>
+<li>Microsoft Cybersecurity Analyst</li>
+<li>IBM and ISC2 Cybersecurity Specialist</li>
+<li>Microsoft Azure Security Engineer Associate (AZ-500)</li>
+<li>IBM Cybersecurity Analyst</li>
+<li>AWS Cloud Solutions Architect- Courserea</li>
+<li>AWS Fundamentals</li>
+<li>Junior Cybersecurity Analyst Career Path – Cisco</li>
+<li>LE-1: Linux Essentials - Linux Professional Institute</li>
+<li>Endpoint Security - Cisco</li>
+<li>Network Defense - Cisco</li>
+<li>Cyber Threat Management - Cisco</li>
+<li>Introduction to Cybersecurity – Cisco</li>
+<li>Junior Cybersecurity Analyst Career Path- Cisco</li>
+<li>Telstra - Cybersecurity Job Simulation</li>
+<li>Tata Group - Cybersecurity Analyst Job Simulation</li>
+<li>PwC Switzerland - Cybersecurity Job Simulation</li>
+<li>Mastercard - Cybersecurity Job Simulation</li>
+<li>JPMorgan Chase & Co. - Cybersecurity Job</li>
+<li>Datacom - Cybersecurity Job Simulation</li>
+<li>Commonwealth Bank - Introduction to Cybersecurity</li>
+<li>ANZ Australia - Cyber Security Management Job</li>
+<li>AIG - Shields Up: Cybersecurity Job</li>
+<li>PwC US - Cyber Security Consulting Job</li>
+<li>Electronic Arts - Software Engineering Job</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h1>Contact</h1>
+            <form action="mailto:sascha.meyer.it@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+        <section id="impressum">
+            <h1>Impressum</h1>
+            <p>Angaben gemäß § 5 TMG</p>
+            <p>
+                Sascha Meyer<br>
+                
+                
+            </p>
+            <p>
+                <strong>Vertreten durch:</strong><br>
+                Sascha Meyer
+            </p>
+            <p>
+                <strong>Kontakt:</strong><br>
+                Telefon: <br>
+                E-Mail: sascha.meyer.it@gmail.com
+            </p>
+            <p>
+                <strong>Umsatzsteuer-ID:</strong><br>
+                Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz: 
+            </p>
+            <p>
+                <strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>
+                Sascha Meyer<br>
+                <br>
+                
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Sascha Meyer. All rights reserved.</p>
+        <p>Email: <a href="mailto:sascha.meyer.it@gmail.com" style="color: white;">sascha.meyer.it@gmail.com</a></p>
+    </footer>
+    </body>
+    </html>
+
+

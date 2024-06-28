@@ -1,0 +1,133 @@
+/* Add styles here */
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+header {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.project-category {
+    margin-bottom: 2rem;
+}
+
+.project-category h2 {
+    background-color: #333;
+    color: #00aaff;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project {
+    background: #1e1e1e;
+    border: 1px solid #00aaff;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 1rem;
+    flex: 1 1 calc(33% - 20px);
+    box-sizing: border-box;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    margin-bottom: 5px;
+    color: #00aaff;
+}
+
+#contact-form input,
+#contact-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #00aaff;
+    border-radius: 4px;
+    background: #121212;
+    color: #fff;
+}
+
+#contact-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #00aaff;
+    color: #fff;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background: #0088cc;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info a {
+    display: block;
+    color: #00aaff;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .project-list {
+        flex-direction: column;
+    }
+
+    .project {
+        flex: 1 1 100%;
+    }
+}
